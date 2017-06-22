@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+		
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE">Admin Page</title>
+
+<!-- Link to CSS Style Files -->
+<style th:replace="@{/shared/_style}"></style>
+
+</head>
+
+<body class="dashboard">
+	<div th:replace="@{/shared/_navbar}"></div>
+	<!-- Link to leftMenu -->
+	<div th:replace="@{/shared/_menu}"></div>
+	
+	<!-- This is Content Part -->
+	<div layout:fragment="content" class="content-wrapper"></div>
+	
+	
+	<!-- Link to Footer -->
+	<div th:replace="@{/shared/_footer}"></div>
+	<!-- Link to Script files -->
+	<div th:replace="@{/shared/_script}"></div>
+</body>
+</html>

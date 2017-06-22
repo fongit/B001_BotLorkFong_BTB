@@ -1,0 +1,112 @@
+<!-- ==============SIDE BAR==========================-->
+<div class="site-menubar">
+    <div class="site-menubar-body">
+        <div>
+            <div>
+                <ul class="site-menu">
+                    <li class="site-menu-category" th:text="#{general}">General</li>
+                    <li class="site-menu-item has-sub active open">
+                        <a href="javascript:void(0)" data-slug="dashboard">
+                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                            <span class="site-menu-title" th:text="#{dashboard}" >Dashboard</span>
+                            <div class="site-menu-badge">
+                                <span class="badge badge-success">1</span>
+                            </div>
+                        </a>
+                        <ul class="site-menu-sub">
+                            <li class="site-menu-item active">
+                                <a class="animsition-link" th:href="@{/admin}" data-slug="dashboard-v1">
+                                    <i class="site-menu-icon " aria-hidden="true"></i>
+                                    <span class="site-menu-title" th:text="#{admin_dashboard}">Admin Dashboard</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="site-menu-item has-sub">
+                        <a href="javascript:void(0)" data-slug="page">
+                            <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+                            <span class="site-menu-title" th:text="#{pages}">Pages</span>
+                            <span class="site-menu-arrow"></span>
+                        </a>
+                        <ul class="site-menu-sub">
+                            <li class="site-menu-item">
+                                <a class="animsition-link" th:href="@{/userlist}" data-slug="page-faq">
+                                    <i class="site-menu-icon  " aria-hidden="true"></i>
+                                    <span class="site-menu-title" th:text="#{user_list}">User list</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" th:href="@{/userform}" data-slug="page-register">
+                                    <i class="site-menu-icon" aria-hidden="true"></i>
+                                    <span class="site-menu-title " th:text="#{user_form}">User Form</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" th:href="@{/roleform}" data-slug="page-register">
+                                    <i class="site-menu-icon " aria-hidden="true"></i>
+                                    <span class="site-menu-title" th:text="#{role_form}">Role Form</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" th:href="@{/rolelist}" data-slug="page-register">
+                                    <i class="site-menu-icon " aria-hidden="true"></i>
+                                    <span class="site-menu-title" th:text="#{role_list}">Role List</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--            <li class="site-menu-category">Elements</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-menubar-footer">
+        <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip" data-original-title="Setting">
+            <span class="icon wb-settings" aria-hidden="true"></span>
+        </a>
+        <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Lock">
+            <span class="icon wb-eye-close" aria-hidden="true"></span>
+        </a>
+        <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
+            <span class="icon wb-power" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+<!-- ==============SIDE BAR END==========================-->
+<div class="site-gridmenu">
+    <ul>
+        <li>
+            <a th:href="@{/admin}">
+                <i class="icon wb-dashboard"></i>
+                <span th:text="#{dashboard}">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/userlist}">
+                <i class="icon wb-user"></i>
+                <span th:text="#{user_list}">User List</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/userform}">
+                <i class="icon wb-layout"></i>
+                <span th:text="#{user_form}">User Form</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/rolelist}">
+                <i class="icon wb-order"></i>
+                <span th:text="#{role_list}">Role List</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/roleform}">
+                <i class="icon wb-library"></i>
+                <span th:text="#{role_form}">Role Form</span>
+            </a>
+        </li>
+    </ul>
+</div>

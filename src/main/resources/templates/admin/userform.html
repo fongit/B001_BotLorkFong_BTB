@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+</head>
+<body class="dashboard">
+	<div layout:fragment="content" class="content-wrapper">
+	<div class="page animsition">
+    <div class="page-header">
+      <h1 class="page-title">Form Layouts</h1>
+      <ol class="breadcrumb">
+        <li><a th:href="@{/admin}">Home</a></li>
+        <li><a href="javascript:void(0)">User Form</a></li>
+        <li class="active">Layouts</li>
+      </ol>
+	<div class="page-content">
+      <div class="panel">
+	  	<div class="panel-body container">
+          <div class="row row-lg">
+
+            <div class="col-sm-12">
+              <!-- Example Basic Form Without Label -->
+              <div class="example-wrap">
+                <h4 class="example-title">Basic Form Without Label</h4>
+                <div class="example">
+                  <form class="">
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" name="firstname" placeholder="First Name"
+                        autocomplete="off" />
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                        autocomplete="off" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="radio-custom radio-default radio-inline">
+                        <input type="radio" id="inputLabelMale" name="inputRadioGender" />
+                        <label for="inputLabelMale">Male</label>
+                      </div>
+                      <div class="radio-custom radio-default radio-inline">
+                        <input type="radio" id="inputLabelFemale" name="inputRadioGender" checked />
+                        <label for="inputLabelFemale">Female</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email Address"
+                      autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="password" placeholder="Password"
+                      autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" placeholder="Briefly Describe Yourself"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <div class="checkbox-custom checkbox-default">
+                        <input type="checkbox" id="inputCheckboxAgree" name="inputCheckboxesAgree" checked
+                        autocomplete="off" />
+                        <label for="inputCheckboxAgree">Agree Policy</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- End Example Basic Form Without Label -->
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+     </div>
+      </div>
+    </div>
+	
+
+</body>
+</html>

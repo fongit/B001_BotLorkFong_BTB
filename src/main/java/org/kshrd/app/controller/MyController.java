@@ -7,7 +7,7 @@ public class MyController {
 	
 	@RequestMapping("/")
 	public String show(){
-		return "mytemplate";
+		return "layout";
 	}
 	
 	
