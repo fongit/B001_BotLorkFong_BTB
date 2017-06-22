@@ -36,28 +36,14 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		/*
-		 * Static Resources store in the project
-		 */
+
 		registry.addResourceHandler("/resources/**")
 					.addResourceLocations("classpath:/static/");
-		/*
-		 * Static Resources store outside the project
-		 */
+
 		registry.addResourceHandler("/files/**")
 					.addResourceLocations("file:/opt/FILES_MANAGEMENT/images/");
 	}
 
-	
-	
-	/*
-	 * Internalization i18n
-	 */
-	
-	/*
-	 * In order for our application to be able to determine which locale is
-	 * currently being used, we need to add a LocaleResolver bean:
-	 */
 	@Bean
 	public LocaleResolver localeResolver() {
 		CookieLocaleResolver resolver = new CookieLocaleResolver();
@@ -67,10 +53,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		return resolver;
 	}
 
-	/*
-	 * Next, we need to add an interceptor bean that will switch to a new locale
-	 * based on the value of the lang parameter appended to a request:
-	 */
+
 	@Bean
 	public LocaleChangeInterceptor localeChangeInterceptor() {
 		LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
@@ -78,21 +61,12 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		return lci;
 	}
 
-	/*
-	 * In order to take effect, this bean needs to be added to the application’s
-	 * interceptor registry.
-	 *
-	 * To achieve this, our @Configuration class has to extend the
-	 * WebMvcConfigurerAdapter class and override the addInterceptors() method:
-	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(localeChangeInterceptor());
 	}
 
-	/*
-	 * Defining the Message Sources
-	 */
+
 	@Bean
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();

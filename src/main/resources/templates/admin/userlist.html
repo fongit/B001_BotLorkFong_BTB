@@ -16,40 +16,40 @@
 		          <form class="page-search-form" role="search">
 		            <div class="input-search input-search-dark">
 		              <i class="input-search-icon wb-search" aria-hidden="true"></i>
-		              <input type="text" class="form-control" id="inputSearch" name="search" placeholder="Search Users">
+		              <input type="text" class="form-control" id="inputSearch" name="search" th:placeholder="#{search_user}">
 		              <button type="button" class="input-search-close icon wb-close" aria-label="Close"></button>
 		            </div>
 		          </form>
 		
 		          <div class="nav-tabs-horizontal">
 		            <div class="dropdown page-user-sortlist">
-		              Order By: <a class="dropdown-toggle inline-block" data-toggle="dropdown"
-		              href="#" aria-expanded="false">Last Active<span class="caret"></span></a>
+		              <span th:text="#{order_by}">Order By:</span> <a class="dropdown-toggle inline-block" data-toggle="dropdown"
+		              href="#" aria-expanded="false" th:text="#{last_active}">Last Active<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
-		                <li class="active" role="presentation"><a href="javascript:void(0)">Last Active</a></li>
-		                <li role="presentation"><a href="javascript:void(0)">Username</a></li>
-		                <li role="presentation"><a href="javascript:void(0)">Location</a></li>
-		                <li role="presentation"><a href="javascript:void(0)">Register Date</a></li>
+		                <li class="active" role="presentation"><a href="javascript:void(0)" th:text="#{last_active}">Last Active</a></li>
+		                <li role="presentation"><a href="javascript:void(0)" th:text="#{username}">Username</a></li>
+		                <li role="presentation"><a href="javascript:void(0)" th:text="#{location}">Location</a></li>
+		                <li role="presentation"><a href="javascript:void(0)" th:text="#{register_date}">Register Date</a></li>
 		              </ul>
 		            </div>
 		
 		            <ul class="nav nav-tabs nav-tabs-line" data-plugin="nav-tabs" role="tablist">
-		              <li class="active" role="presentation"><a data-toggle="tab" href="#all_contacts" aria-controls="all_contacts"
-		                role="tab" th:text="#{all_contactss}">All Contacts</a></li>
+		              <li class="active" role="presentation"><a data-toggle="tab" href="all_contacts" aria-controls="all_contacts"
+		                role="tab" th:text="#{all_contacts}">All Contacts</a></li>
 		              <li role="presentation"><a data-toggle="tab" href="#my_contacts" aria-controls="my_contacts"
-		                role="tab">My Contacts</a></li>
+		                role="tab" th:text="#{my_contacts}">My Contacts</a></li>
 		              <li role="presentation"><a data-toggle="tab" href="#google_contacts" aria-controls="google_contacts"
-		                role="tab">Google Contacts</a></li>
+		                role="tab" th:text="#{google_contacts}">Google Contacts</a></li>
 		              <li class="dropdown" role="presentation">
 		                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-		                  <span class="caret"></span>Contacts </a>
+		                  <span class="caret"></span><span th:text="#{contacts}">Contacts</span>s </a>
 		                <ul class="dropdown-menu" role="menu">
 		                  <li role="presentation"><a data-toggle="tab" href="#all_contacts" aria-controls="all_contacts"
-		                    role="tab">All Contacts</a></li>
+		                    role="tab" th:text="#{all_contacts}">All Contacts</a></li>
 		                  <li class="active" role="presentation"><a data-toggle="tab" href="#my_contacts" aria-controls="my_contacts"
-		                    role="tab">My Contacts</a></li>
+		                    role="tab" th:text="#{my_contacts}">My Contacts</a></li>
 		                  <li role="presentation"><a data-toggle="tab" href="#google_contacts" aria-controls="google_contacts"
-		                    role="tab">Google Contacts</a></li>
+		                    role="tab" th:text="#{google_contacts}">Google Contacts</a></li>
 		                </ul>
 		              </li>
 		            </ul>
@@ -91,7 +91,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -130,7 +130,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -170,7 +170,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -211,7 +211,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -251,7 +251,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -291,7 +291,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -332,7 +332,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -372,7 +372,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -411,7 +411,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}" >Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -451,7 +451,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -491,7 +491,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}" >Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -530,7 +530,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -593,7 +593,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -633,7 +633,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -673,7 +673,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -712,7 +712,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -752,7 +752,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -792,7 +792,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -831,7 +831,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -871,7 +871,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -911,7 +911,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -950,7 +950,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -989,7 +989,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1053,7 +1053,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -1094,7 +1094,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -1134,7 +1134,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1173,7 +1173,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1213,7 +1213,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -1253,7 +1253,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1292,7 +1292,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1332,7 +1332,7 @@
 		                      </div>
 		                      <div class="media-right">
 		                        <button type="button" class="btn btn-success btn-default btn-sm">
-		                          <i class="icon wb-check" aria-hidden="true"></i>Following
+		                          <i class="icon wb-check" aria-hidden="true"></i><span th:text="#{following}">Following</span>
 		                        </button>
 		                      </div>
 		                    </div>
@@ -1372,7 +1372,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}">Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>
@@ -1411,7 +1411,7 @@
 		                        </div>
 		                      </div>
 		                      <div class="media-right">
-		                        <button type="button" class="btn btn-outline btn-success btn-sm">Follow</button>
+		                        <button type="button" class="btn btn-outline btn-success btn-sm" th:text="#{follow}" >Follow</button>
 		                      </div>
 		                    </div>
 		                  </li>

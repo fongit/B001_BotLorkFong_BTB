@@ -10,11 +10,11 @@
 	<div layout:fragment="content" class="content-wrapper">
 	<div class="page animsition">
     <div class="page-header">
-      <h1 class="page-title">Form Layouts</h1>
+      <h1 class="page-title" th:text="#{user_form}">Form Layouts</h1>
       <ol class="breadcrumb">
-        <li><a th:href="@{/admin}">Home</a></li>
-        <li><a href="javascript:void(0)">User Form</a></li>
-        <li class="active">Layouts</li>
+        <li><a th:href="@{/admin}" th:text="#{home}">Home</a></li>
+        <li><a href="javascript:void(0)" th:text="#{user_form}">User Form</a></li>
+        <li class="active" th:text="#{layout}">Layouts</li>
       </ol>
 	<div class="page-content">
       <div class="panel">
@@ -24,49 +24,49 @@
             <div class="col-sm-12">
               <!-- Example Basic Form Without Label -->
               <div class="example-wrap">
-                <h4 class="example-title">Basic Form Without Label</h4>
+                <h4 class="example-title" th:text="#{user_form_layout}" >Basic Form Without Label</h4>
                 <div class="example">
                   <form class="">
                     <div class="form-group row">
                       <div class="col-sm-6">
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name"
+                        <input type="text" class="form-control" name="firstname" th:placeholder="#{first_name}"
                         autocomplete="off" />
                       </div>
                       <div class="col-sm-6">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                        <input type="text" class="form-control" name="lastname" th:placeholder="#{last_name}"
                         autocomplete="off" />
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="radio-custom radio-default radio-inline">
                         <input type="radio" id="inputLabelMale" name="inputRadioGender" />
-                        <label for="inputLabelMale">Male</label>
+                        <label for="inputLabelMale" th:text="#{male}">Male</label>
                       </div>
                       <div class="radio-custom radio-default radio-inline">
                         <input type="radio" id="inputLabelFemale" name="inputRadioGender" checked />
-                        <label for="inputLabelFemale">Female</label>
+                        <label for="inputLabelFemale" th:text="#{female}">Female</label>
                       </div>
                     </div>
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Email Address"
+                      <input type="email" class="form-control" name="email" th:placeholder="#{email_address}"
                       autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="password" placeholder="Password"
+                      <input type="password" class="form-control" name="password" th:placeholder="#{password}"
                       autocomplete="off" />
                     </div>
                     <div class="form-group">
-                      <textarea class="form-control" placeholder="Briefly Describe Yourself"></textarea>
+                      <textarea class="form-control" th:placeholder="#{breifly_describe}"></textarea>
                     </div>
                     <div class="form-group">
                       <div class="checkbox-custom checkbox-default">
                         <input type="checkbox" id="inputCheckboxAgree" name="inputCheckboxesAgree" checked
                         autocomplete="off" />
-                        <label for="inputCheckboxAgree">Agree Policy</label>
+                        <label for="inputCheckboxAgree" th:text="#{agree_policy}">Agree Policy</label>
                       </div>
                     </div>
                     <div class="form-group">
-                      <button type="button" class="btn btn-primary">Submit</button>
+                      <button type="button" class="btn btn-primary" th:text="#{submit}" >Submit</button>
                     </div>
                   </form>
                 </div>
