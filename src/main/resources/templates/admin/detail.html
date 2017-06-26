@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content" class="content-wrapper">
+
+	<div th:objec="${USER}">
+		<p th:text="*{id}"></p>
+		<p th:text="*{username}"></p>
+	</div>
+</div>
+</body>
+</html>

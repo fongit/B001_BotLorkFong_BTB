@@ -8,45 +8,39 @@
 </head>
 <body class="dashboard">
 	<div layout:fragment="content" class="content-wrapper">
-		<div class="page">
-		    <div class="page-content padding-30 container-fluid">
-		      <div class="row" data-plugin="matchHeight" data-by-row="true">
-		        <div class="col-md-12">
-		          <!-- Panel Predictions -->
-		          <div class="widget widget-shadow widget-responsive" id="widgetLineareaColor">
-		            <div class="widget-content widget-radius bg-white">
-		              <div class="padding-top-30 padding-30" style="height:calc(100% - 250px);">
-		                <div class="row">
-		                  <div class="col-xs-7">
-		                  <div class="example-wrap">
-		                   <a class="inline-block" href="/resources/assets/portraits/5.jpg" data-plugin="magnificPopup"
-		                  data-close-btn-inside="false" data-fixed-contentPos="true" data-main-class="mfp-margin-0s mfp-with-zoom"
-		                  data-zoom='{"enabled": "true","duration":"300"}'>
-		                        <img class="img-responsive" src="/resources/assets/portraits/5.jpg" alt="..."
-		                    width="220" />
-		                   </a>
-		                    </div>
-		                    <p class="font-size-20 blue-grey-700" th:text="#{user_name}">User Name: Bot LorkFong</p>
-		                    
-		                    <p th:text="#{description}">Description: Students</p>
-		                    <div class="counter counter-md text-left">
-		                    </div>
-		                  </div>
-		                  <div class="col-xs-5">
-		                  </div>
+		  
+		  <div class="page animsition">
+		    <div class="page-content padding-0">
+		      <ul class="blocks no-space blocks-100 blocks-xlg-3 blocks-md-2">
+		        <li class="widget" th:each="U:${user}"> 
+		        
+		          <div class="widget-header cover overlay overlay-hover">
+		            <img class="cover-image overlay-scale" src="/resources/assets/photos/placeholder.png"
+		            alt="...">
+		            <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+		              <div class="vertical-align-middle">
+		              	<a class="avatar avatar-lg" href="javascript:void(0)">
+                  			<img src="/resources/assets/portraits/5.jpg" alt="...">
+                		</a>
+		                <div class="widget-time widget-divider">
+		                  <span th:text="${U.phonenumber}">Phone Number</span>
 		                </div>
+		                <h3 class="widget-title margin-bottom-20" th:text="${U.username}">id</h3>
+		                <button type="button" class="btn btn-outline btn-inverse">READ MORE</button>
 		              </div>
-		              <div class="ct-chart height-250"></div>
 		            </div>
 		          </div>
-		          <!-- End Panel Predictions -->
-		        </div>
+		        </li>
+		      </ul>
 		    </div>
-		   </div>
-		</div>
-	
-	
-	
+		  </div>
+		
+		
+		
+	<div >
+		
+	</div>
+		
 	</div>
 
 </body>
