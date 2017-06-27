@@ -20,10 +20,10 @@ public class MyController {
 		this.userservice=user;
 	}
 	
-	@RequestMapping("/")
-	public String show(){
-		return "/admin/dashboard";
-	}
+//	@RequestMapping("/")
+//	public String show(){
+//		return "/admin/dashboard";
+//	}
 	
 	@RequestMapping("/userlist")
 	public String list(ModelMap model, User user){
@@ -33,6 +33,17 @@ public class MyController {
 		model.addAttribute("male", userservice.countmale());
 		return "/admin/userlist";
 	}
+	
+	@RequestMapping(value={"/","/dashboard"})
+	public String show(ModelMap model, User user){
+		model.addAttribute("user", userservice.findAll());
+		model.addAttribute("total", userservice.total());
+		model.addAttribute("female", userservice.countfemale());
+		model.addAttribute("male", userservice.countmale());
+		return "/admin/dashboard";
+	}
+	
+	
 	@RequestMapping("/userform")
 	public String insert(ModelMap model){
 //		return userservice.save(new User(0, "TestUser","test@gmail.com", "femal", "2017-6-24", "0", "01234567"));

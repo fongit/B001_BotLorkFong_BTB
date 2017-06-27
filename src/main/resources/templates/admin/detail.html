@@ -9,35 +9,58 @@
 <body>
 <div layout:fragment="content" class="content-wrapper">
 	<div class="page animsition">
-		<div class="page-content">
-	      <!-- Panel Basic -->
-	      <div class="panel">
-	        <header class="panel-heading">
-	          <div class="panel-actions"></div>
-	          <h3 class="panel-title" th:text="#{role_list}">Basic</h3>
-	        </header>
-	        
-	        <div class="panel-body">
-	        <table>
-	          <tr th:each="U:${USER}">
-				<td th:text="${U.id}">user id</td>
-				<td th:text="${U.username}"> user name</td>
-				<td th:text="${U.email}"> email</td>
-			</tr>
-			</table>
-	        </div>
-	      </div>
+			<div class="page-content">
+		      <!-- Panel Basic -->
+		      <div class="panel">
+		        <header class="panel-heading">
+		          <div class="panel-actions"></div>
+		          <h3 class="panel-title" th:text="#{userinfo}">Basic</h3>
+		        </header>
+		        
+		        <div class="panel-body">
+		        <div class=" col-md-12">
+          <!-- Panel Web Designer -->
+		          <div class="widget widget-shadow">
+		            <div th:each="U:${USER}" class="widget-content widget-radius text-center bg-white padding-40" >
+		              <div class="avatar avatar-100 margin-bottom-20">
+		                <img src="/resources/assets/portraits/21.jpg" alt="">
+		              </div>
+		              <p class="font-size-20 blue-grey-700" th:text="${U.username}">User Name </p>
+		              <p class="blue-grey-400 margin-bottom-20" >Gender :<span th:text="${U.gender}"></span></p>
+		              <p class="blue-grey-400 margin-bottom-20" >Phone Number :<span th:text="${U.phonenumber}"></span> </p>
+		              <p class="margin-bottom-35" >Email Address : <span th:text="${U.email}"></span></p>
+		              <ul class="list-inline font-size-18 margin-bottom-35">
+		                <li>
+		                  <a class="blue-grey-400" href="javascript:void(0)">
+		                    <i class="icon bd-twitter" aria-hidden="true"></i>
+		                  </a>
+		                </li>
+		                <li class="margin-left-10">
+		                  <a class="blue-grey-400" href="javascript:void(0)">
+		                    <i class="icon bd-facebook" aria-hidden="true"></i>
+		                  </a>
+		                </li>
+		                <li class="margin-left-10">
+		                  <a class="blue-grey-400" href="javascript:void(0)">
+		                    <i class="icon bd-dribbble" aria-hidden="true"></i>
+		                  </a>
+		                </li>
+		                <li class="margin-left-10">
+		                  <a class="blue-grey-400" href="javascript:void(0)">
+		                    <i class="icon bd-instagram" aria-hidden="true"></i>
+		                  </a>
+		                </li>
+		              </ul>
+		              
+		            </div>
+		          </div>
+		          <!-- End Panel Web Designer -->
+		        </div>
+		        
+		        </div>
+		      </div>
+	     	</div>
      </div>
-     </div>
-
-
-
-
-	<!-- <div th:objec="${USER}">
-		<p th:text="*{id}">user id</p>
-		<p th:text="*{username}"> user name</p>
-		<p th:text="*{email}"> email</p>
-	</div> -->
 </div>
 </body>
 </html>

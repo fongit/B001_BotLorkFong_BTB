@@ -28,10 +28,10 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		registry.addViewController("/admin").setViewName("/admin/dashboard");
 //		registry.addViewController("/admin/").setViewName("/admin/dashboard");
 //		registry.addViewController("/admin/dashboard").setViewName("/admin/dashboard");
-//		registry.addViewController("/rolelist").setViewName("/admin/rolelist");
+		registry.addViewController("/rolelist").setViewName("/admin/rolelist");
 //		registry.addViewController("/userlist").setViewName("/admin/userlist");
 //		registry.addViewController("/userform").setViewName("/admin/userform");
-//		registry.addViewController("/roleform").setViewName("/admin/roleform");
+		registry.addViewController("/roleform").setViewName("/admin/roleform");
 	}
 
 	@Override
