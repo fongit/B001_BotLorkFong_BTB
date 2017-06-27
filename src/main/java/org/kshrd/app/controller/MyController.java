@@ -22,13 +22,15 @@ public class MyController {
 	
 	@RequestMapping("/")
 	public String show(){
-		return "/dashboard";
+		return "/admin/dashboard";
 	}
 	
 	@RequestMapping("/userlist")
-	public String list(ModelMap model){
-		
+	public String list(ModelMap model, User user){
 		model.addAttribute("user", userservice.findAll());
+		model.addAttribute("total", userservice.total());
+		model.addAttribute("female", userservice.countfemale());
+		model.addAttribute("male", userservice.countmale());
 		return "/admin/userlist";
 	}
 	@RequestMapping("/userform")
@@ -70,12 +72,12 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping("/detail")
-	public String detailpage(@RequestParam("user_hash") String user_hash, ModelMap model){
+	@RequestMapping("/detail/{user_hash}")
+	public String detailpage(@PathVariable("user_hash") String user_hash, ModelMap model){
 		
 		User user=userservice.selectUserhash(user_hash);
 		model.addAttribute("USER", user);
-		return "/detail";
+		return "/admin/detail";
 	}
 	
 }

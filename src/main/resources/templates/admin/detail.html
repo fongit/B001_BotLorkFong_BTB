@@ -8,11 +8,36 @@
 </head>
 <body>
 <div layout:fragment="content" class="content-wrapper">
+	<div class="page animsition">
+		<div class="page-content">
+	      <!-- Panel Basic -->
+	      <div class="panel">
+	        <header class="panel-heading">
+	          <div class="panel-actions"></div>
+	          <h3 class="panel-title" th:text="#{role_list}">Basic</h3>
+	        </header>
+	        
+	        <div class="panel-body">
+	        <table>
+	          <tr th:each="U:${USER}">
+				<td th:text="${U.id}">user id</td>
+				<td th:text="${U.username}"> user name</td>
+				<td th:text="${U.email}"> email</td>
+			</tr>
+			</table>
+	        </div>
+	      </div>
+     </div>
+     </div>
 
-	<div th:objec="${USER}">
-		<p th:text="*{id}"></p>
-		<p th:text="*{username}"></p>
-	</div>
+
+
+
+	<!-- <div th:objec="${USER}">
+		<p th:text="*{id}">user id</p>
+		<p th:text="*{username}"> user name</p>
+		<p th:text="*{email}"> email</p>
+	</div> -->
 </div>
 </body>
 </html>

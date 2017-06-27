@@ -10,4 +10,7 @@ public interface UserService {
 	public boolean deleteByUserHash(String userHash);
 	public boolean updateByUserHash(User user);
 	public User selectUserhash(String userhash);
+	public int total();
+	public int countfemale();
+	public int countmale();
 }

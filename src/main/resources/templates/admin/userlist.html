@@ -40,16 +40,25 @@
 		                          data-original-title="Edit">
 		                            <i class="icon wb-wrench" aria-hidden="true"></i>
 		                          </a>
-		                          <a th:href="@{/delete/{user_hash}(user_hash=${U.user_hash})}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"></a>
-		                           <a th:href="@{/detail/{user_hash}(user_hash=${U.user_hash})}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"></a>
-		                         
+		                           <a th:href="@{/detail/{user_hash}(user_hash=${U.user_hash})}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+		                          data-original-title="View">
+		                            <i class="icon wb-user" aria-hidden="true"></i>
+		                          </a>
+		                          <a th:href="@{/delete/{user_hash}(user_hash=${U.user_hash})}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+		                          data-original-title="Delete">
 		                            <i class="icon wb-close" aria-hidden="true"></i>
 		                          </a>
+		                           
 		                        </td>
 		                      </tr>
 		                      
 		                    </tbody>
 		                  </table>
+		                  <div>
+		                  		<p>Total Users: <span th:text="${total}"></span> (users)</p>
+		                 		<p>Male Users: <span th:text="${male}"></span> (users)</p>
+		                 		<p>Female Users: <span th:text="${female}"></span> (users)</p>	 
+		                  </div>
 		                </div>
 		              </div>
 		      <!-- End Panel -->

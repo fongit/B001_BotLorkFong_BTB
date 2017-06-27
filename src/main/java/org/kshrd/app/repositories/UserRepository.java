@@ -32,4 +32,12 @@ public interface UserRepository {
 	
 	@Select("SELECT id, username, email, gender,phonenumber, user_hash FROM users WHERE user_hash=#{user_hash}")
 	public User selectUserhash(String user_hash);
+	@Select("select count(id) from users")
+	public int total();
+	
+	@Select("select count(user_hash) from users where gender='Female'")
+	public int countfemale();
+	
+	@Select("select count(user_hash) from users where gender='Male'")
+	public int countmale();
 }

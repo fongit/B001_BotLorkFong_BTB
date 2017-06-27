@@ -75,6 +75,24 @@ public class UserServiceImpl implements UserService {
 //		}
 		return userRepository.selectUserhash(userhash);
 	}
+
+	@Override
+	public int total() {
+		
+		return userRepository.total();
+	}
+
+	@Override
+	public int countfemale() {
+		
+		return userRepository.countfemale();
+	}
+
+	@Override
+	public int countmale() {
+		// TODO Auto-generated method stub
+		return userRepository.countmale();
+	}
 	
 	
 	
